@@ -1,8 +1,8 @@
-CPPFLAGS = -std=c++14 -stdlib=libc++ -pedantic -fmodules-ts -fprebuilt-module-path=$(BUILD)/$(SOURCE)
-
 EXEC = $(shell basename $(shell pwd))
 SOURCE = src
 BUILD = build
+
+CPPFLAGS = -std=c++14 -stdlib=libc++ -pedantic -fmodules-ts -fprebuilt-module-path=$(BUILD)/$(SOURCE)
 
 SOURCES := $(shell find $(SOURCE) -name *.cpp)
 MODULES := $(shell find $(SOURCE) -name *.cppm)
